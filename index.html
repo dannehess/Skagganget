@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Skäggänget AB</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="#"><img src="images/beard.png" class="beardlogo" alt="beardlogo" onmouseover="changeLogo(this)"
+                    onmouseout="normalLogo(this)"></a>
+                    <a href="#" class="toplogo">SKÄGGÄNGET</a>
+                </div>
+                <a class="icon" onclick="myHamburger()">&#9776;</a>
+                <div class="topnav" id="myTopnav">
+                    <a href="#omoss" class="active" onclick="myHamburger()">OM OSS</a>
+                    <a href="#priser"onclick="myHamburger()">PRISER</a>
+                    <a href="#bokatid" onclick="myHamburger()">BOKA TID</a>
+                    <a href="#kontakt" onclick="myHamburger()">KONTAKT</a>
+                </div>
+            </header>
+            
+            <section class="slideshow">
+                    <div class="slideshow-overlay">
+                            <p id="citat" class="citat"></p>
+                            <p id="stamkund" class="stamkund"></p>
+                    </div>
+            </section>
+            <div id="omoss" class="anchor"></div>
+            <main>
+                <section class="om">
+                    <div class="left">
+                        <h1>Om oss</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia temporibus nesciunt a
+                        suscipit
+                        magni dicta repudiandae? Ex voluptatum at eum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia temporibus nesciunt a
+                        suscipit
+                        magni dicta repudiandae? Ex voluptatum at eum.</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, natus.
+                    </p>
+                </div>
+                <div class="right">
+                    <h1 class="rubrik-center">Öppettider</h1>
+                    <table class="tabell">
+                        <tr>
+                            <td class="bold">Måndag</td>
+                            <td>10:00 - 16:00</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Tisdag</td>
+                            <td>10:00 - 16:00</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Onsdag</td>
+                            <td>10:00 - 16:00</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Torsdag</td>
+                            <td>10:00 - 16:00</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Fredag</td>
+                            <td>10:00 - 16:00</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Lördag</td>
+                            <td>12:00 - 14:00</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Söndag</td>
+                            <td>Stängt</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <div id="priser" class="anchor"></div>
+            <section class="priser">
+                <div class="left">
+                    <h1>Priser</h1>
+                    <table class="tabell-pris">
+                        <tr>
+                            <td class="bold">Skäggtrimning</td>
+                            <td class="tabell-pris-pris">290 kr</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Mustaschtrim/Vård</td>
+                            <td class="tabell-pris-pris">210 kr</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Traditionell rakning m. kniv</td>
+                            <td class="tabell-pris-pris">490 kr</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Herrklipp, Rakning/Skäggtrim</td>
+                            <td class="tabell-pris-pris">950 kr</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Skäggtrim och slätrakning</td>
+                            <td class="tabell-pris-pris">490 kr</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Herrklipp och Skäggvård</td>
+                            <td class="tabell-pris-pris">930 kr</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Herrklipp</td>
+                            <td class="tabell-pris-pris">725 kr</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Rakning Huvud med maskin</td>
+                            <td class="tabell-pris-pris">175 kr
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="right">
+                    <div class="swap">
+                        <img id="slide" alt="swapper" src="../images/beardhover.png">
+                    </div>
+                </div>
+            </section>
+            <div id="bokatid" class="anchor"></div>
+            <section class="boka">
+                <div class="left">
+                    <h1>Boka tid</h1>
+                    <form id="bokning" name="bokning" method="post" action="bokning.php">
+                    <table class="boka-tabell">
+                        <tr>
+                            <td>Fullständigt namn</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="bname" name="bname" required>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>Telefonnummer</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="bphone" name="bphone" required></td>
+                        </tr>
+                        <tr>
+                            <td>Behandling</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="bprice" id="bprice" required>
+                                    <option>Skäggtrimning 290kr</option>
+                                    <option>Mustaschtrim/Vård 210kr</option>
+                                    <option>Traditionell rakning m. kniv 490kr</option>
+                                    <option>Herrklipp, Rakning/Skäggtrim 950kr</option>
+                                    <option>Skäggtrim och slätrakning 490kr</option>
+                                    <option>Herrklipp och Skäggvård 930kr</option>
+                                    <option>Herrklipp 725kr</option>
+                                    <option>Rakning Huvud med maskin 175kr</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Datum</td>
+                        </tr>
+                        <tr>
+                            <td><input type="date" id="bdate" name="bdate" required></td>
+                        </tr>
+                        <tr>
+                            <td>Tid</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="btime" id="btime" required>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Barberare</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="bbarber" id="bbarber" required>
+                                    <option value="Olle">Olle</option>
+                                    <option value="Pelle">Pelle</option>
+                                    <option value="Nisse">Nisse</option>
+                                    <option value="Kalle">Kalle</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Kommentarer</td>
+                        </tr>
+                        <tr>
+                            <td><textarea id="bmessage" name="bmessage"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><br>
+                                <input type="submit" id="bbook" class="book-button" value="Boka tid">
+                            </td>
+                        </tr>
+                    </table>
+                    </form>
+                </div>
+                <div class="right bigscissor">
+                </div>
+            </section>
+            <div id="kontakt" class="anchor"></div>
+            <section class="kontakt">
+                <div class="left kontakt-info">
+                    <h1>Kontakta oss</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <br><br>
+                    <table class="tabell-left">
+                        <tr>
+                            <td class="company">Skäggänget AB</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="adress">Loremipsumgatan 45</td>
+                        </tr>
+                        <tr>
+                            <td class="adress">174 32 Ipsumsund</td>
+                        </tr>
+                        <tr>
+                            <td class="adress">Tel: 01-23 45 67</td>
+                        </tr>
+                        <tr>
+                            <td class="adress">info@skagganget.se</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="right">
+
+                    <form id="kontakt" name="kontakt" method="post" action="formmailskagg.php">
+                    <table class="kontakt-tabell">
+                        <tr>
+                            <td>Fullständigt namn</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name" id="name" required></td>
+                        </tr>
+                        <tr>
+                            <td>E-postadress</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="email" id="email" required></td>
+                        </tr>
+                        <tr>
+                            <td>Meddelande</td>
+                        </tr>
+                        <tr>
+                            <td><textarea name="message" id="message" required></textarea><br><br></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input name="submit" type="submit" value="Skicka"></td>
+                        </tr>
+                    </table>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <a href="#"><img src="images/facebook.png" class="socialmedia" alt="facebook"></a>
+            <a href="#"><img src="images/twitter.png" class="socialmedia" alt="twitter"></a>
+            <a href="#"><img src="images/instagram.png" class="socialmedia" alt="instagram"></a>
+        </footer>
+    </div>
+    <script src="js.js"></script>
+</body>
+
+</html>
