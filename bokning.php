@@ -1,8 +1,10 @@
 <?php
 
+/* Bestämmer ämne på mailet och vart det ska skickas. */
 $subject = 'Bokning';
 $to = 'skagganget@gmail.com';
 
+/* Hämtar värdena användaren har fyllt i formuläret. */
 $name = $_POST['bname'];
 $phone = $_POST['bphone'];
 $bprice = $_POST['bprice'];
@@ -11,7 +13,9 @@ $time = $_POST['btime'];
 $barber = $_POST['bbarber'];
 $message = $_POST['bmessage'];
 
+/* Ritar upp HTML-sidan / Mailet som skickas till den bestämda e-postadressen. */
 $body = <<<EOD
+<html>
 <body style="
     background-color: rgb(200, 211, 192);
     font-family: verdana;
@@ -145,12 +149,19 @@ $body = <<<EOD
 </table>
 </div>
 <br><br>
+</body>
+</html>
 EOD;
+
+    /* Skickar mailet med bestämt ämne och med HTML-kodning. */
 
     $headers = "Bokning från hemsidan";
     $headers = "Content-type: text/html\r\n";
     $success = mail($to, $subject, $body, $headers);
     
+     /* Javascript som skriver ut en alert och skickar tillbaka användaren
+    till startsidan.
+    */
 echo "<script type='text/javascript'>
 alert('Tack för din bokning!');
 window.location='http://www.danielhessling.se/skagganget/index.html';
